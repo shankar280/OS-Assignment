@@ -2,8 +2,6 @@
 #include<stdlib.h>
 #include<pthread.h>
 #include<stdbool.h>
-#include<unistd.h>
-#include<stdlib.h>
 int student[3][4]={0};
 void *teacher();
 void *stu1();
