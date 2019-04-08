@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
 #include<pthread.h>
 #include<stdbool.h>
 int student[3][4]={0};
