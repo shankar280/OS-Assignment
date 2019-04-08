@@ -1,11 +1,12 @@
 #include<stdio.h>
 #include<pthread.h>
 #include<stdbool.h>
+#include<stdlib.h>
 int student[3][4]={0};
 void *teacher();
-void *stu1();
-void *stu2();
-void *stu3();
+void *st1();
+void *st2();
+void *st3();
 pthread_mutex_t lock;
 int ch1,ch2;
 int r1,r2;
@@ -62,7 +63,7 @@ void *teacher()
 	pthread_mutex_unlock(&lck);
 }
 
-void *stu2()
+void *st2()
 {	
 	pthread_mutex_lock(&lck);
 	printf("\nChoices Made = 'pen', 'question_paper'\n");
@@ -70,7 +71,7 @@ void *stu2()
 	printf("\n\tStudent 2 has Completed the assignment. \n");
 	pthread_mutex_unlock(&lck);
 }
-void *stu3()
+void *st3()
 {	
 	pthread_mutex_lock(&lck);
 	printf("\nChoices Made = 'pen', 'paper'\n");
@@ -78,7 +79,7 @@ void *stu3()
 	printf("\n\tStudent 3 has Completed the assignment.\n");
 	pthread_mutex_unlock(&lck);
 }
-void *stu1()
+void *st()
 {	
 	pthread_mutex_lock(&lck);
 	printf("\nChoices Made = 'paper', 'question_paper'\n");
