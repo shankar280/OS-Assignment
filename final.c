@@ -7,14 +7,14 @@ void *teacher();
 void *st1();
 void *st2();
 void *st3();
-pthread_mutex_t lock;
+pthread_mutex_t l;
 int ch1,ch2;
 int r1,r2;
 
 int main()
 {	
 	printf("\t\t\t---Welcome---\n");
-	pthread_mutex_init(&lck,NULL);
+	pthread_mutex_init(&l,NULL);
 	
 	student[1][1]=1;
 	student[2][2]=2;student[3][3]=1;
@@ -55,35 +55,35 @@ int main()
 
 void *teacher()
 {
-	pthread_mutex_lock(&lck);
+	pthread_mutex_lock(&l);
 	printf("\nFirst Resource on shared tabel:-\t");
 	scanf("%d",&ch1);
 	printf("Second Resource on shared tabel:-\t");
 	scanf("%d",&ch2);
-	pthread_mutex_unlock(&lck);
+	pthread_mutex_unlock(&l);
 }
 
 void *st2()
 {	
-	pthread_mutex_lock(&lck);
+	pthread_mutex_lock(&l);
 	printf("\nChoices Made = 'pen', 'question_paper'\n");
 	student[2][4]=1;
 	printf("\n\tStudent 2 has Completed the assignment. \n");
-	pthread_mutex_unlock(&lck);
+	pthread_mutex_unlock(&l);
 }
 void *st3()
 {	
-	pthread_mutex_lock(&lck);
+	pthread_mutex_lock(&l);
 	printf("\nChoices Made = 'pen', 'paper'\n");
 	student[3][4]=1;
 	printf("\n\tStudent 3 has Completed the assignment.\n");
-	pthread_mutex_unlock(&lck);
+	pthread_mutex_unlock(&l);
 }
 void *st()
 {	
-	pthread_mutex_lock(&lck);
+	pthread_mutex_lock(&l);
 	printf("\nChoices Made = 'paper', 'question_paper'\n");
 	student[1][4]=1;
 	printf("\n\tStudent 1 has Completed the assignment.\n");	
-	pthread_mutex_unlock(&lck);
+	pthread_mutex_unlock(&l);
 }
