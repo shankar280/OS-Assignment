@@ -6,6 +6,6 @@ int main()
 {
 	int i,t[20],n;
 	int responsetime[20];
-	printf("process no: ");
+	printf("Total number of process: ");
 	scanf("%d",&n);
-	printf("Enter data\n");
+	printf("Provide data of the processes\n");
