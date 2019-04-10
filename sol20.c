@@ -68,7 +68,7 @@ void *st2()
 	pthread_mutex_lock(&l);
 	printf("\nChoices Made = 'pen', 'question paper'\n");
 	student[2][4]=1;
-	printf("\n\tAssaignment of student 2 has been completed. \n");
+	printf("\n\tAssignment of student 2 has been completed. \n");
 	pthread_mutex_unlock(&l);
 }
 void *st3()
@@ -76,7 +76,7 @@ void *st3()
 	pthread_mutex_lock(&l);
 	printf("\nChoices Made = 'pen', 'paper'\n");
 	student[3][4]=1;
-	printf("\n\tAssaignment of student 3 has been completed.\n");
+	printf("\n\tAssignment of student 3 has been completed.\n");
 	pthread_mutex_unlock(&l);
 }
 void *st1()
@@ -84,6 +84,6 @@ void *st1()
 	pthread_mutex_lock(&l);
 	printf("\nChoices Made = 'paper', 'question_paper'\n");
 	student[1][4]=1;
-	printf("\n\tAssaignment of student 1 has been completed.\n");	
+	printf("\n\tAssignment of student 1 has been completed.\n");	
 	pthread_mutex_unlock(&l);
 }
