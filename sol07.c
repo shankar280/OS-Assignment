@@ -22,3 +22,7 @@ int main()
 	t[i]=0;
 	}
 	}
+printf("Process\t\tResponse Time\tType of process\t\t\tPriority of process");
+	for(i=0;i<n;i++)
+	{
+	printf("\nP%d\t\t%dms\t\t",i,responsetime[i]);
