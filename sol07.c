@@ -26,3 +26,16 @@ printf("Process\t\tResponse Time\tType of process\t\t\tPriority of process");
 	for(i=0;i<n;i++)
 	{
 	printf("\nP%d\t\t%dms\t\t",i,responsetime[i]);
+for(i=0;i<n;i++)
+	{
+	printf("\nP%d\t\t%dms\t\t",i,responsetime[i]);
+	if(t[i]==1)
+	{
+	printf("Interactive process\t\tHigh priority");
+	}
+	else
+	{
+	printf("Non_Interactive process\t\tLow priority");
+	}
+	}
+}
