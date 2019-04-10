@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<pthread.h>
 #include<stdlib.h>
+#include<semphore.h>
 int student[3][4]={0};
 void *teacher();
 void *st1();
