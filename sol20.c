@@ -20,7 +20,7 @@ int main()
 	student[2][2]=2;student[3][3]=1;
 	pthread_t t_thread;
 	pthread_t s_thread;
-	printf("Resources Menu: \n\t\tPress '1' for pen\n\t\tPress '2' for paper \n\t\tPress '3' for question_paper \n"); 
+	printf("Resources Details: \n\t\tPress '1' for pen\n\t\tPress '2' for paper \n\t\tPress '3' for question paper \n"); 
 	
 	while(1)
 	{
@@ -68,7 +68,7 @@ void *st2()
 	pthread_mutex_lock(&l);
 	printf("\nChoices Made = 'pen', 'question paper'\n");
 	student[2][4]=1;
-	printf("\n\tStudent 2 has Completed the assignment. \n");
+	printf("\n\tAssaignment of student 2 has been completed. \n");
 	pthread_mutex_unlock(&l);
 }
 void *st3()
@@ -76,7 +76,7 @@ void *st3()
 	pthread_mutex_lock(&l);
 	printf("\nChoices Made = 'pen', 'paper'\n");
 	student[3][4]=1;
-	printf("\n\tStudent 3 has Completed the assignment.\n");
+	printf("\n\tAssaignment of student 3 has been completed.\n");
 	pthread_mutex_unlock(&l);
 }
 void *st1()
@@ -84,6 +84,6 @@ void *st1()
 	pthread_mutex_lock(&l);
 	printf("\nChoices Made = 'paper', 'question_paper'\n");
 	student[1][4]=1;
-	printf("\n\tStudent 1 has Completed the assignment.\n");	
+	printf("\n\tAssaignment of student 1 has been completed.\n");	
 	pthread_mutex_unlock(&l);
 }
